@@ -19,7 +19,12 @@ class PostController extends Controller
     {
         // dd($slug);
         $post = Post::where("slug", $slug)->with(["category", "tags"])->first();
-        // dd($post);
+        //dd($post);
+
+        //404
+        if(empty($post)) {
+            return response()->json(["message" => "Page Not Found"], 404);
+        }
         return response()->json($post);
     }
 }

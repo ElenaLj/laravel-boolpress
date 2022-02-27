@@ -1,0 +1,44 @@
+/*
+    ASSETS
+*/
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/*
+    RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    TYPO
+*/
+body {
+    font-family: $font-family-sans-serif;
+    background-color: $background-light;
+}
+
+nav {
+    list-style: none;
+}
+
+a, li {
+    text-decoration: none;
+}
+
+a:visited {
+    color: $color-secondary;
+  }
+
+/*
+    CONTAINERS
+*/
+.container {
+    width: 80%;
+    max-width: 75rem;
+    margin: 1.25rem auto;
+}
+

@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap);/*
+    ASSETS
+*/
+
+/*
+    RESET
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+    TYPO
+*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #FEF9DC;
+}
+
+nav {
+  list-style: none;
+}
+
+a,
+li {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #92C24C;
+}
+
+/*
+    CONTAINERS
+*/
+
+.container {
+  width: 80%;
+  max-width: 75rem;
+  margin: 1.25rem auto;
+}
+

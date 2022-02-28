@@ -12,11 +12,18 @@ class Post extends Model
         "category_id"
     ];
     
-    public function category() {
+    public function category() 
+    {
         return $this->belongsTo("App\Category");
     }
 
-    public function tags() {
+    public function tags() 
+    {
         return $this->belongsToMany("App\Tag");
+    }
+
+    public function comments() 
+    {
+        return $this->hasMany('App\Comment');
     }
 }

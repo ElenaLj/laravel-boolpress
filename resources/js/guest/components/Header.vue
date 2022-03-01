@@ -1,18 +1,25 @@
 <template>
   <header class="header">
-      <h2 class="header__logo">Boolpress</h2>
-      <nav class="header__nav">
-        <li>
-          <router-link :to="{ name: 'home' }" class="header__links">Home</router-link> 
-        </li>
-        <li>
-          <router-link :to="{ name: 'about' }" class="header__links" id="about">About</router-link> 
-        </li>
-        <li>
-          <router-link :to="{ name: 'categories' }" class="header__links">Categorie</router-link> 
-        </li>
+      <div class="header__logo">
+        <img src="images/boolpress-logo.png" alt="Boolpress logo" class="header__image">
+        <h2 class="header__text">Boolpress: a food blog</h2>
+      </div>
+      
+      <nav>
+        <ul class="header__list">
+          <li>
+            <router-link :to="{ name: 'home' }" class="header__links">Home</router-link> 
+          </li>
+          <li>
+            <router-link :to="{ name: 'about' }" class="header__links" id="about">About</router-link> 
+          </li>
+          <li>
+            <router-link :to="{ name: 'categories' }" class="header__links">Categorie</router-link> 
+          </li>
+
+          <a href="/admin/home" class="header__login">Login</a>
+        </ul>
       </nav>
-      <a href="/admin/home" class="header__login">Login</a>
   </header>
 </template>
 
@@ -32,11 +39,20 @@ export default {
 
     &__logo {
       padding: .3125rem;
-      font-size: 3rem;
-      font-weight: 600;
+      font-size: 2.5rem;
       text-align: center;
       color: $color-primary;
       flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    &__image {
+      height: 9.375rem;
+    }
+
+    &__text {
+      height: fit-content;
     }
 
     &__login {
@@ -46,7 +62,11 @@ export default {
       margin-bottom: -3px;
     }
 
-    &__nav {
+    nav {
+      display: flex;
+    }
+
+    &__list {
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -65,7 +85,7 @@ export default {
 
     &__links:hover,
     &__login:hover {
-      border-bottom: 3px solid $border-header-dark;
+      border-bottom: 3px solid $yellow-dark;
     }
 
     #about {

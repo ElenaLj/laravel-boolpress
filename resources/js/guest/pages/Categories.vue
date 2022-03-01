@@ -25,3 +25,11 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+  .categories {
+    padding: 1.25rem 2.1875rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+</style>

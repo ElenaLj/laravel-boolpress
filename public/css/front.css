@@ -1,9 +1,7 @@
-@import url(https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap);/*
-    ASSETS
-*/
+@import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;
 
-/*
-    RESET
+0,500;1,400;1,500&display=swap);/*
+    ASSETS
 */
 
 * {
@@ -17,11 +15,23 @@
 */
 
 body {
-  font-family: "Nunito", sans-serif;
   background-color: #FEF9DC;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
 }
 
-nav {
+h1 {
+  font-family: "Satisfy", cursive;
+  color: #4C0805;
+}
+
+h4 {
+  font-family: "Satisfy", cursive;
+  font-size: 1.875rem;
+  color: #44813E;
+}
+
+ul {
   list-style: none;
 }
 
@@ -31,7 +41,7 @@ li {
 }
 
 a:visited {
-  color: #92C24C;
+  color: #DC9C45;
 }
 
 /*

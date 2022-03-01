@@ -1,9 +1,10 @@
 <template>
     <div class="posts">
-        <h2>Latest posts</h2>
-        <ul>
-            <li v-for="post in posts" :key="post.id">
+        <ul class="posts__list">
+            <li v-for="post in posts" :key="post.id" class="posts__card">
                 <h4>{{post.title}}</h4>
+                <p>{{post.content}}</p>
+                <img :src="post.image" alt="">
                 <p v-if="post.category">Categoria :<strong>{{post.category.name}}</strong></p>
                 <div v-if="post.tags.length > 0">
                     <p><strong>Tags:</strong></p>
@@ -13,10 +14,9 @@
                         </li>
                     </ul>
                 </div>
-                <p>{{post.content}}</p>
                 <router-link :to="{ name: 'single-post', params: { slug:post.slug } }">Visualizza post</router-link>
-          </li>
-      </ul>
+            </li>
+        </ul>
   </div>
 </template>
 
@@ -37,6 +37,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
 
+    .posts {
+
+        margin: 1.25rem 0;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        &__card {
+            width: calc(100% / 2 - 20px);
+            padding: 1.5rem;
+            border: 2px dotted $color-border;
+            border-radius: 1.75rem;
+            background-color: $background-light;
+        }
+
+    }
 </style>

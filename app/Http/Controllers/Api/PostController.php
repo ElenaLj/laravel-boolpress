@@ -18,7 +18,9 @@ class PostController extends Controller
     public function show($slug)
     {
         // dd($slug);
-        $post = Post::where("slug", $slug)->with(["category", "tags"])->first();
+        $post = Post::where("slug", $slug)->with(["category", "tags", "comments" => function($query){
+            $query->where("approved", "1");
+        }])->first();
         //dd($post);
 
         //404

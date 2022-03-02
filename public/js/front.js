@@ -2262,6 +2262,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SinglePost",
   data: function data() {
@@ -2451,7 +2461,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".single-post__title[data-v-57a632a8] {\n  color: #4C0805;\n  font-family: \"Satisfy\", cursive;\n  text-align: center;\n}\n.single-post__image[data-v-57a632a8] {\n  width: 50%;\n  display: block;\n  margin: 1.75rem auto;\n  border-radius: 0.25rem;\n  box-shadow: 0.25rem 0.25rem 1.5rem 0.125rem #B7A246;\n}\n.single-post__text[data-v-57a632a8] {\n  text-align: justify;\n  line-height: 1.6;\n}\n.single-post__comments[data-v-57a632a8] {\n  margin: 1rem 0;\n}\n.single-post input[type=text][data-v-57a632a8], .single-post textarea[data-v-57a632a8] {\n  width: 50%;\n  margin-bottom: 1rem;\n  padding: 1rem 1rem;\n  background-color: #fdf3c5;\n  border: none;\n}\n.single-post input[data-v-57a632a8]:focus, .single-post textarea[data-v-57a632a8]:focus {\n  outline-color: #44813E;\n}\n.single-post button[type=submit][data-v-57a632a8] {\n  padding: 1rem;\n  color: #FEF9DC;\n  background-color: #44813E;\n  border: none;\n  border-radius: 0.375rem;\n}", ""]);
+exports.push([module.i, ".single-post__title[data-v-57a632a8] {\n  color: #4C0805;\n  font-family: \"Satisfy\", cursive;\n  text-align: center;\n}\n.single-post__image[data-v-57a632a8] {\n  width: 50%;\n  display: block;\n  margin: 1.75rem auto;\n  border-radius: 0.25rem;\n  box-shadow: 0.25rem 0.25rem 1.5rem 0.125rem #B7A246;\n}\n.single-post__text[data-v-57a632a8] {\n  text-align: justify;\n  line-height: 1.6;\n}\n.single-post__comments[data-v-57a632a8] {\n  margin: 1rem 0;\n}\n.single-post input[type=text][data-v-57a632a8], .single-post textarea[data-v-57a632a8], .single-post__cmnt[data-v-57a632a8] {\n  width: 50%;\n  margin-bottom: 1rem;\n  padding: 1rem 1rem;\n  background-color: #fdf3c5;\n  border: none;\n}\n.single-post input[data-v-57a632a8]:focus, .single-post textarea[data-v-57a632a8]:focus {\n  outline-color: #44813E;\n}\n.single-post button[type=submit][data-v-57a632a8] {\n  padding: 1rem;\n  color: #FEF9DC;\n  background-color: #44813E;\n  border: none;\n  border-radius: 0.375rem;\n}\n.single-post__comment[data-v-57a632a8] {\n  margin: 1rem 0;\n  padding: 1rem;\n  background-color: #FEF9DC;\n  border-radius: 0.375rem;\n}", ""]);
 
 // exports
 
@@ -4386,6 +4396,27 @@ var render = function () {
             "\n            Commento in fase di revisione. Grazie del contributo!\n        "
           ),
         ]
+      ),
+    ]),
+    _vm._v(" "),
+    _c("div", [
+      _c("h4", [_vm._v("Comments")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "single-post__cmnt" },
+        _vm._l(_vm.post.comments, function (comment) {
+          return _c(
+            "li",
+            { key: comment.id, staticClass: "single-post__comment" },
+            [
+              _c("h5", [_vm._v(_vm._s(comment.name))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(comment.content))]),
+            ]
+          )
+        }),
+        0
       ),
     ]),
   ])

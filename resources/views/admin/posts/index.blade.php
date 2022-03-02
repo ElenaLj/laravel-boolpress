@@ -22,6 +22,7 @@
                             <th scope="col">Slug</th>
                             <th scope="col">Status</th>
                             <th scope="col">Category</th>
+                            <th scope="col">To be apporved</th>
                             <th scope="col">Actions</th>
                             <th scope="col">Actions</th>
                             <th scope="col">Actions</th>
@@ -51,6 +52,12 @@
                                     @else
                                         <span class="badge badge-secondary w-100">No category</span>
                                     @endif 
+                                </td>
+
+                                <td>
+                                    {{count($post->comments->filter(function($comment, $key){ 
+                                        return $comment->approved == 0; 
+                                    }))}}
                                 </td>
                                 {{-- OPEN RECORD --}}
                                 <td>

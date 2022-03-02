@@ -28,6 +28,16 @@
               Commento in fase di revisione. Grazie del contributo!
           </div>
       </div>
+
+      <div>
+          <h4>Comments</h4>
+          <ul class="single-post__cmnt">
+              <li v-for="comment in post.comments" :key="comment.id" class="single-post__comment">
+                  <h5>{{comment.name}}</h5>
+                  <p>{{comment.content}}</p>
+              </li>
+          </ul>
+      </div>
   </div>
 </template>
 
@@ -99,7 +109,7 @@ export default {
             margin: 1rem 0;
         }
 
-        input[type=text], textarea {
+        input[type=text], textarea, &__cmnt {
             width: 50%;
             margin-bottom: 1rem;
             padding: 1rem 1rem;
@@ -116,6 +126,13 @@ export default {
             color: $background-light;
             background-color: $color-border;
             border: none;
+            border-radius: .375rem;
+        }
+
+        &__comment {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: $background-light;
             border-radius: .375rem;
         }
     }

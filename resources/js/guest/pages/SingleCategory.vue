@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Nome della categoria</h1>
+      <h1>{{category.name}}</h1>
       <ul v-if="category.posts.length > 0">
           <li v-for="post in category.posts" :key="post.id">
               <router-link :to="{name: 'single-post', params: {slug: post.slug}}">{{post.title}}</router-link>
@@ -29,6 +29,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
 
+    li {
+        line-height: 1.6;
+    }
+
+    li:hover > * {
+        color: $color-border;
+    }
 </style>

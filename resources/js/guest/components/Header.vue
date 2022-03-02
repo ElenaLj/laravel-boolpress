@@ -1,7 +1,7 @@
 <template>
   <header class="header">
       <div class="header__logo">
-        <img src="images/boolpress-logo.png" alt="Boolpress logo" class="header__image">
+        <img src="/images/boolpress-logo.png" alt="Boolpress logo" class="header__image">
         <h2 class="header__text">Boolpress: a food blog</h2>
       </div>
       
@@ -36,6 +36,7 @@ export default {
   border-radius: .9375rem;
   font-family: $font-secondary;
   display: flex;
+  border-bottom: 3px dotted $color-primary;
 
     &__logo {
       padding: .3125rem;

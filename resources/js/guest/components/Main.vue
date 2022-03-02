@@ -16,8 +16,8 @@ export default {
     main {
         margin: 1.25rem 0;
         padding: 1.25rem;
-        background-color: $background-secondary-light;
-        border: 2px dotted $color-border;
-        border-radius: 1.625rem;
+        // background-color: $background-secondary-light;
+        // border: 2px dotted $color-border;
+        // border-radius: 1.625rem;
     }
 </style>

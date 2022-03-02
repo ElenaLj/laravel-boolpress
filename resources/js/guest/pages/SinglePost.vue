@@ -1,15 +1,14 @@
 <template>
   <div class="single-post">
-      <h2>{{post.title}}</h2>
-      <img :src="`/storage/${post.image}`" :alt="post.title">
-      <p>{{post.content}}</p>
+      <h2 class="single-post__title">{{post.title}}</h2>
+      <img :src="`/storage/${post.image}`" :alt="post.title" class="single-post__image">
+      <p class="single-post__text">{{post.content}}</p>
 
-      <div>
+      <div class="single-post__comments">
           <h4>Lascia un commento</h4>
           <form @submit.prevent="addComment()">
               <div>
                 <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" v-model="formData.name">
-                <label for="nome"></label>
               </div>
               <div>
                 <textarea id="comment" cols="30" rows="10" placeholder="Commenta... *" v-model="formData.content"></textarea>
@@ -72,6 +71,52 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
 
+    .single-post {
+
+        &__title {
+            color: $color-dark;
+            font-family: $font-secondary;
+            text-align: center;
+        }
+
+        &__image {
+            width: 50%;
+            display: block;
+            margin: 1.75rem auto;
+            border-radius: .25rem;
+            box-shadow: .25rem .25rem 1.5rem .125rem $shadow;
+        }
+
+        &__text {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        &__comments {
+            margin: 1rem 0;
+        }
+
+        input[type=text], textarea {
+            width: 50%;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem;
+            background-color: $background-secondary-light;
+            border: none;
+        }
+
+        input:focus, textarea:focus {
+            outline-color: $color-border;
+        }
+
+        button[type=submit] {
+            padding: 1rem;
+            color: $background-light;
+            background-color: $color-border;
+            border: none;
+            border-radius: .375rem;
+        }
+    }
 </style>

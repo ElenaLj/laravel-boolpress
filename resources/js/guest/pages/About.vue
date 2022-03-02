@@ -1,6 +1,7 @@
 <template>
   <div class="about">
       <h1>About</h1>
+      <img src="images/1.jpeg" alt="People cooking" class="about__image">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quisquam dolorem porro quod magni perspiciatis, beatae voluptate praesentium quo repudiandae quas amet at, obcaecati labore maiores tempore quasi inventore qui.
       Molestiae consectetur dolore quia aliquid non libero saepe rem nisi. Voluptates animi labore rerum? Officiis maiores odit ratione modi repellat sapiente ex placeat dolore nam, doloremque consequuntur vero perferendis facilis!
       Laborum corrupti minus laudantium deleniti? Recusandae, reiciendis animi! Iure eos perferendis maxime explicabo consequuntur et saepe sequi optio corporis, nemo quaerat eius maiores amet possimus fugit quis facere voluptates quae!
@@ -16,9 +17,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
+
   .about {
     padding: 1.25rem 2.1875rem;
     text-align: justify;
     line-height: 1.6;
+
+      &__image {
+        width: 100%;
+        margin: 1.75rem 0;
+        border-radius: .25rem;
+        box-shadow: .25rem .25rem 1.5rem .125rem $shadow;
+      }
   }
 </style>
